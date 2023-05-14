@@ -18,7 +18,7 @@ class Cell(Widget):
         self.margin = margin
         self.actual_pos = (x, y)
         self.graphical_pos_attach()
-        self.color = (0.2, 1.0, 0.2, 1.0)
+        self.color = (1, 1, 1, 1.0)
 
     def graphical_pos_attach(self, smooth_motion=None):
         to_x, to_y = self.actual_pos[0] - self.graphical_size[0] / 2, self.actual_pos[1] - self.graphical_size[1] / 2
@@ -113,7 +113,7 @@ class Form(Widget):
         if self.fruit is not None:
             self.remove_widget(self.fruit)
         self.fruit = Cell(0, 0, self.config.APPLE_SIZE)
-        self.fruit.color = (1.0, 0.2, 0.2, 1.0)
+        self.fruit.color = (0, 0, 0.545, 1.0)
         self.fruit_dislocate()
         self.add_widget(self.fruit)
         self.game_on = True
